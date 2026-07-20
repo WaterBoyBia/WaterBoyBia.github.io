@@ -1,11 +1,12 @@
 :root {
-  color-scheme: light;
-  --paper: #f5f5f2;
-  --ink: #11110f;
-  --muted: #686863;
-  --line: #d2d2cc;
-  --accent: #1e6245;
-  --warm: #a75b30;
+  color-scheme: dark;
+  --paper: #0b0b0c;
+  --surface: #151516;
+  --ink: #f3f3ef;
+  --muted: #9b9b94;
+  --line: #30302d;
+  --accent: #6fc795;
+  --warm: #d28a60;
   --header-height: 72px;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-synthesis: none;
@@ -30,7 +31,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: var(--ink);
+  background: #050505;
   content: "";
   pointer-events: none;
   animation: curtain 900ms cubic-bezier(.76, 0, .24, 1) 120ms forwards;
@@ -163,8 +164,11 @@ button {
   overflow-wrap: anywhere;
 }
 
-.hero h1 {
-  font-size: clamp(50px, 8.2vw, 128px);
+.hero h1 span {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .hero__lead {
@@ -359,12 +363,13 @@ button {
   justify-content: space-between;
   min-height: 240px;
   padding: 0 clamp(20px, 7vw, 112px);
-  color: var(--paper);
-  background: var(--ink);
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--surface);
 }
 
 .next-link small {
-  color: #a8a8a2;
+  color: var(--muted);
   font-size: 12px;
 }
 
@@ -466,7 +471,7 @@ button {
     padding: calc(var(--header-height) + 44px) 20px 72px;
   }
 
-  .hero h1 { font-size: clamp(46px, 15vw, 72px); }
+  .hero h1 { font-size: clamp(48px, 17vw, 80px); }
   .hero__lead { margin-top: 24px; font-size: 18px; }
   .ripple { position: absolute; right: -32vw; bottom: -13vw; width: 92vw; opacity: .65; }
   .scroll-cue { bottom: 20px; left: 20px; }
