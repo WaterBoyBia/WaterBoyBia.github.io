@@ -163,6 +163,10 @@ button {
   overflow-wrap: anywhere;
 }
 
+.hero h1 {
+  font-size: clamp(50px, 8.2vw, 128px);
+}
+
 .hero__lead {
   max-width: 560px;
   margin: 40px 0 0;
@@ -462,7 +466,7 @@ button {
     padding: calc(var(--header-height) + 44px) 20px 72px;
   }
 
-  .hero h1 { font-size: clamp(48px, 17vw, 80px); }
+  .hero h1 { font-size: clamp(46px, 15vw, 72px); }
   .hero__lead { margin-top: 24px; font-size: 18px; }
   .ripple { position: absolute; right: -32vw; bottom: -13vw; width: 92vw; opacity: .65; }
   .scroll-cue { bottom: 20px; left: 20px; }
