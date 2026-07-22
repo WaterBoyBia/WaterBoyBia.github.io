@@ -246,6 +246,10 @@ button {
   letter-spacing: 0;
 }
 
+.section-heading h2 {
+  font-size: clamp(36px, 4.5vw, 64px);
+}
+
 .section-list {
   border-top: 1px solid var(--ink);
 }
