@@ -7,29 +7,65 @@
   <meta name="theme-color" content="#0b0b0c">
   <title>快门印象 · WaterBoyBia</title>
   <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/photograph.css">
   <script src="/assets/main.js" defer></script>
+  <script src="/assets/photograph.js" type="module"></script>
 </head>
 <body data-page="photograph">
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <a class="brand" href="/" aria-label="WaterBoyBia 首页">W.</a>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-button__label">菜单</span><span class="menu-button__icon" aria-hidden="true"></span></button>
     <nav class="site-nav" id="site-nav" aria-label="主要导航"><a href="/introduction/">简介</a><a href="/photograph/">快门印象</a><a href="/note/">浮生杂记</a></nav>
   </header>
   <main id="main">
-    <section class="page-hero">
-      <div class="page-hero__inner reveal">
-        <div class="page-hero__topline"><span>02 / 03</span><span>所见与所感</span></div>
-        <div class="page-hero__title-row"><h1>快门印象</h1><span class="page-hero__mark" aria-hidden="true"></span></div>
+    <section class="photo-hero" data-carousel="featured" aria-labelledby="photograph-title">
+      <div class="photo-slides" aria-live="off">
+        <figure class="photo-slide is-active" data-slide aria-hidden="false">
+          <img src="/photograph/generated/stars/DSC_0015(2)-2000.webp" alt="校园建筑与花木构成的明亮画面" width="2000" height="1333" fetchpriority="high">
+        </figure>
+        <figure class="photo-slide" data-slide aria-hidden="true"><img src="/photograph/generated/stars/DSC_0024(2)-2000.webp" alt="兴隆湖边的自然景色" width="2000" height="1333" loading="lazy"></figure>
+        <figure class="photo-slide" data-slide aria-hidden="true"><img src="/photograph/generated/stars/DSC_0036-2000.webp" alt="光线下的校园景色" width="2000" height="1333" loading="lazy"></figure>
+        <figure class="photo-slide" data-slide aria-hidden="true"><img src="/photograph/generated/stars/DSC_0048(2)-2000.webp" alt="湖边景色与天空" width="2000" height="1333" loading="lazy"></figure>
+        <figure class="photo-slide" data-slide aria-hidden="true"><img src="/photograph/generated/stars/DSC_0185-2000.webp" alt="校园中的建筑与植物" width="2000" height="1333" loading="lazy"></figure>
+        <figure class="photo-slide" data-slide aria-hidden="true"><img src="/photograph/generated/stars/DSC_0310-2000.webp" alt="江面、铁路与远处城区" width="2000" height="1333" loading="lazy"></figure>
+        <figure class="photo-slide" data-slide aria-hidden="true"><img src="/photograph/generated/stars/IMG_20260503_145746-2000.webp" alt="晴日里的城市风景" width="2000" height="1332" loading="lazy"></figure>
+      </div>
+      <div class="photo-hero__shade" aria-hidden="true"></div>
+      <div class="photo-hero__content">
+        <p class="eyebrow">02 / 03 · 精选</p>
+        <h1 id="photograph-title">快门印象</h1>
+        <p>按下快门，是为了让一瞬间拥有更长的回声。</p>
+      </div>
+      <div class="photo-controls" aria-label="精选图片控制">
+        <p><span data-carousel-current>01</span> / <span>07</span></p>
+        <button type="button" data-carousel-action="previous" aria-label="上一张精选图片">←</button>
+        <button type="button" data-carousel-action="toggle" aria-label="暂停自动播放" aria-pressed="false">暂停</button>
+        <button type="button" data-carousel-action="next" aria-label="下一张精选图片">→</button>
+      </div>
+      <a class="photo-scroll" href="#albums">浏览相册集 <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="album-index" id="albums" aria-labelledby="albums-title">
+      <header class="album-index__header reveal">
+        <p class="eyebrow">ALBUMS</p>
+        <h2 id="albums-title">相册集</h2>
+        <p>沿着光线留下的方向，走进一段完整的观看。</p>
+      </header>
+      <div class="album-grid">
+        <article class="album-card reveal">
+          <a href="/photograph/albums/兴隆湖边/">
+            <div class="album-card__image"><img src="/photograph/generated/albums/兴隆湖边/DSC_0067-2400.webp" alt="兴隆湖边相册封面：蓝天下的黄色花朵" width="2400" height="1600" loading="lazy"></div>
+            <div class="album-card__body"><p>01 · 10 张</p><h3>兴隆湖边</h3><p>沿着兴隆湖缓慢行走，水面、花木与远处的建筑在明亮的天光下彼此回应。</p><span aria-hidden="true">↗</span></div>
+          </a>
+        </article>
+        <article class="album-card reveal">
+          <a href="/photograph/albums/川大剪影/">
+            <div class="album-card__image"><img src="/photograph/generated/albums/川大剪影/DSC_0009(1)-2400.webp" alt="川大剪影相册封面：蓝天下的花枝与建筑" width="1600" height="2400" loading="lazy"></div>
+            <div class="album-card__body"><p>02 · 7 张</p><h3>川大剪影</h3><p>镜头穿过校园的树影、花枝与建筑线条，把熟悉的道路切成一段段安静的画面。</p><span aria-hidden="true">↗</span></div>
+          </a>
+        </article>
       </div>
     </section>
-    <section class="content-section">
-      <div class="content-grid">
-        <p class="content-aside reveal">PHOTOGRAPH</p>
-        <div class="placeholder reveal"><p class="placeholder__statement">按下快门，是为了让一瞬间拥有更长的回声。</p><p class="placeholder__detail">快门印象将在这里陆续呈现。首版暂不使用示例图片，等待真实的光影抵达。</p></div>
-      </div>
-    </section>
-    <a class="next-link" href="/note/"><span><small>下一部分</small><br><strong>浮生杂记</strong></span><span aria-hidden="true">↗</span></a>
   </main>
   <footer class="site-footer"><p>WaterBoyBia</p><p>保持好奇，持续记录。</p></footer>
 </body>

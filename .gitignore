@@ -1,2 +1,6 @@
-AGENTS.md
 require/
+docs/
+scripts/
+tests/
+.agents/
+AGENTS.md
