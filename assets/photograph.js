@@ -3,6 +3,15 @@ export const previousIndex = (index, total) => (index - 1 + total) % total;
 export const shouldAutoplay = ({ userPaused, interactionPaused, pageHidden, reducedMotion }) =>
   !userPaused && !interactionPaused && !pageHidden && !reducedMotion;
 
+export const shuffleItems = (items, random = Math.random) => {
+  const shuffled = [...items];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+};
+
 const pad = (value) => String(value).padStart(2, '0');
 
 function initCarousel(root) {
@@ -101,6 +110,10 @@ function initCarousel(root) {
   sync();
 }
 
+function randomizeGallery(gallery) {
+  shuffleItems([...gallery.children]).forEach((item) => gallery.append(item));
+}
+
 function initLightbox(dialog) {
   const items = [...document.querySelectorAll('[data-lightbox-item]')];
   const image = dialog.querySelector('[data-lightbox-image]');
@@ -148,6 +161,7 @@ function initLightbox(dialog) {
 }
 
 if (typeof document !== 'undefined') {
+  document.querySelectorAll('[data-randomize-gallery]').forEach(randomizeGallery);
   document.querySelectorAll('[data-carousel]').forEach(initCarousel);
   document.querySelectorAll('[data-lightbox-dialog]').forEach(initLightbox);
 }
